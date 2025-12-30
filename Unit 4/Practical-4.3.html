@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+    <title>Event Handling</title>
+<body>
+<h2 id="displayArea">Move mouse here or type something</h2>
+<button id="stopBtn">Stop Hovering</button>
+<script>
+let area = document.getElementById("displayArea")
+
+function detectMouse() {
+    area.innerHTML = "Cursor Detected!"
+}
+
+area.addEventListener("mouseover", detectMouse)
+
+document.addEventListener("keydown", function(e) {
+    area.innerHTML = "Key Typed: " + e.key
+})
+
+document.getElementById("stopBtn").addEventListener("click", function() {
+    area.removeEventListener("mouseover", detectMouse)
+    area.innerHTML = "Mouse detection stopped."
+})
+</script>
+</body>
+</html>

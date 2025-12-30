@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Citizen Registration</title>
+</head>
+<body>
+
+    <h2>Citizenship Form</h2>
+
+    <form>
+
+        <label for="fullName">Full Name:</label><br>
+        <input type="text" id="fullName" name="fullName" required><br><br>
+
+        <label for="birthDate">Date of Birth:</label><br>
+        <input type="date" id="birthDate" name="birthDate" required><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" id="g1" name="gender" value="Female">
+        <label for="g1">Female</label><br>
+
+        <input type="radio" id="g2" name="gender" value="Male">
+        <label for="g2">Male</label><br>
+
+        <input type="radio" id="g3" name="gender" value="Other">
+        <label for="g3">Other</label><br><br>
+
+        <label>Preferred Contact:</label><br>
+        <input type="checkbox" id="emailOpt" name="contactMethod" value="Email">
+        <label for="emailOpt">Email</label><br>
+
+        <input type="checkbox" id="phoneOpt" name="contactMethod" value="Phone">
+        <label for="phoneOpt">Phone</label><br>
+
+        <input type="checkbox" id="smsOpt" name="contactMethod" value="SMS">
+        <label for="smsOpt">SMS</label><br><br>
+
+        <label for="region">State:</label><br>
+        <select id="region" name="region">
+            <option>Bihar</option>
+            <option>Jharkhand</option>
+            <option>Chhattisgarh</option>
+            <option>Odisha</option>
+            <option>West Bengal</option>
+            <option>Uttar Pradesh</option>
+        </select><br><br>
+
+        <input type="submit" value="Submit">
+
+    </form>
+
+</body>
+</html>

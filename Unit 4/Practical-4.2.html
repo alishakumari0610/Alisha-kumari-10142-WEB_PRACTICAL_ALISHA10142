@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Visibility Toggle</title>
+    <style>
+        .vanish {
+            display: none;
+        }
+
+        .marked {
+            background: lightgreen;
+            padding: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <p id="msgBlock">Alisha's magic text line.</p>
+    <button onclick="flipState()">Hide/Seek</button>
+    <button onclick="markText()">Colorize</button>
+    <script>
+        function flipState() {
+            document.getElementById("msgBlock").classList.toggle("vanish")
+        }
+
+        function markText() {
+            document.getElementById("msgBlock").classList.toggle("marked")
+        }
+    </script>
+</body>
+</html>

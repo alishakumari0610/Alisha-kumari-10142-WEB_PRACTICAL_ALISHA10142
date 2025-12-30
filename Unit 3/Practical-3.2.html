@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Control Structures</title>
+</head>
+<body>
+    <h3>Control Flow Output:</h3>
+    <hr>
+    <script>
+        let checkVal = 10;
+        
+        if (checkVal > 0) {
+            document.write("<b>Status:</b> Positive Number" + '<br>');
+        } else if (checkVal < 0) {
+            document.write("<b>Status:</b> Negative Number" + '<br>');
+        } else {
+            document.write("<b>Status:</b> Zero" + '<br>');
+        }
+        document.write('<br>');
+
+        document.write("<strong>For Loop Output:</strong>" + '<br>');
+        for (let k = 1; k < 6; k++) {
+            document.write("Count: " + k + '<br>');
+        }
+        document.write('<br>');
+
+        document.write("<strong>While Loop Output:</strong>" + '<br>');
+        let count = 1;
+        while (count < 6) {
+            document.write("Item " + count + '<br>');
+            count++;
+        }
+        document.write('<br>');
+
+        document.write("<strong>Do-While Loop Output:</strong>" + '<br>');
+        let iter = 1;
+        do {
+            document.write("Val " + iter + '<br>');
+            iter++;
+        } while (iter <= 5);
+    </script>
+</body>
+</html>

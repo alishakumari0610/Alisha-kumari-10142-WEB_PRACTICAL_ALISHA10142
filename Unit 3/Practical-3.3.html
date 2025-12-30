@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Scope & Functions</title>
+</head>
+<body>
+    <script>
+        function welcomeUser(username) {
+            document.write("Welcome, " + username + "!<br>");
+        }
+
+        function calculateSum(n1, n2) {
+            return n1 + n2;
+        }
+
+        welcomeUser("Alisha Singh");
+        
+        let result = calculateSum(10, 5);
+        document.write("Sum result: " + result + "<br><hr>");
+
+        var globalA = 100;
+        let globalB = 200;
+        const globalC = 300;
+
+        document.write("<b>Global Context:</b><br>");
+        document.write(globalA + '<br>', globalB + '<br>', globalC + '<br><br>');
+
+        function checkVariableScope() {
+            var localA = 1;
+            let localB = 2;
+            const localC = 3;
+            document.write("<b>Local Function Context:</b><br>");
+            document.write(localA + '<br>', localB + '<br>', localC + '<br><br>');
+        }
+
+        checkVariableScope();
+
+        document.write("<b>Back to Global:</b><br>");
+        document.write(globalA + '<br>', globalB + '<br>', globalC + '<br>');
+    </script>
+</body>
+</html>

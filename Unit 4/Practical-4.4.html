@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>List Manager</title>
+    </head>
+<body>
+<ul id="myUL">
+    <li>Starter Entry</li>
+</ul>
+<button onclick="addNew()">Add One</button>
+<button onclick="dropLast()">Delete End</button>
+<button onclick="editTop()">Update Top</button>
+<script>
+function addNew() {
+    let node = document.createElement("li")
+    node.textContent = "Fresh Entry"
+    document.getElementById("myUL").appendChild(node)
+}
+function dropLast() {
+    let box = document.getElementById("myUL")
+    box.removeChild(box.lastElementChild)
+}
+function editTop() {
+    let topNode = document.getElementById("myUL").firstElementChild
+    topNode.textContent = "Modified Header Item"
+}
+</script>
+</body>
+</html>

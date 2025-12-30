@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alisha's Canvas</title>
+</head>
+<body>
+
+<canvas id="drawingArea" width="400" height="300" style="border:2px solid #333;"></canvas>
+
+<script>
+  const board = document.getElementById("drawingArea")
+  const brush = board.getContext("2d")
+
+  brush.fillStyle = "crimson"
+  brush.fillRect(30, 30, 100, 60)
+
+  brush.beginPath()
+  brush.arc(280, 80, 35, 0, 2 * Math.PI)
+  brush.fillStyle = "teal"
+  brush.fill()
+
+  brush.beginPath()
+  brush.moveTo(40, 220)
+  brush.lineTo(360, 220)
+  brush.strokeStyle = "navy"
+  brush.lineWidth = 5
+  brush.stroke()
+
+  brush.beginPath()
+  brush.moveTo(200, 160)
+  brush.lineTo(160, 240)
+  brush.lineTo(240, 240)
+  brush.closePath()
+  brush.fillStyle = "gold"
+  brush.fill()
+</script>
+
+</body>
+</html>

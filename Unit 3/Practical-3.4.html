@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Form Validation - Alisha</title>
+</head>
+<body>
+<h3>User Entry Form</h3>
+<form onsubmit="return validateData()">
+  <input id="userEntry" type="text" placeholder="Type your full name" oninput="statusMsg.innerText='...'">
+  <br><br>
+  <button type="submit">Send Data</button>
+</form>
+
+<p id="statusMsg" style="color: blue;"></p>
+
+<script>
+  function validateData() {
+    let entry = document.getElementById("userEntry").value
+
+    // Using trim() checks if user only entered spaces
+    if (entry.trim() === "") {
+      alert("Error: Name field is required.")
+      document.getElementById("statusMsg").innerText = "Validation Failed."
+      document.getElementById("statusMsg").style.color = "red"
+      return false
+    }
+
+    alert("Validation Successful!")
+    document.getElementById("statusMsg").innerText = "Thank you, " + entry
+    document.getElementById("statusMsg").style.color = "green"
+    return true
+  }
+</script>
+</body>
+</html>

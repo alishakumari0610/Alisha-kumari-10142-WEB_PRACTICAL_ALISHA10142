@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Alisha's Calculator</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+    input { padding: 5px; margin: 5px; }
+    button { padding: 8px 15px; margin: 5px; background-color: #f0f0f0; cursor: pointer; }
+    button:hover { background-color: #ddd; }
+  </style>
+</head>
+<body>
+  <div class="calc-container">
+    <h2>Basic Arithmetic</h2>
+    <input id="num1" type="number" placeholder="Value 1">
+    <input id="num2" type="number" placeholder="Value 2">
+    <br><br>
+    <button onclick="calcSum()">+</button>
+    <button onclick="calcDiff()">-</button>
+    <button onclick="calcProd()">*</button>
+    <button onclick="calcQuot()">/</button>
+    <h3 id="output-text">Result will appear here</h3>
+  </div>
+
+<script>
+  function calcSum() {
+    let v1 = Number(document.getElementById("num1").value)
+    let v2 = Number(document.getElementById("num2").value)
+    document.getElementById("output-text").innerText = "Sum: " + (v1 + v2)
+  }
+  function calcDiff() {
+    let v1 = Number(document.getElementById("num1").value)
+    let v2 = Number(document.getElementById("num2").value)
+    document.getElementById("output-text").innerText = "Difference: " + (v1 - v2)
+  }
+  function calcProd() {
+    let v1 = Number(document.getElementById("num1").value)
+    let v2 = Number(document.getElementById("num2").value)
+    document.getElementById("output-text").innerText = "Product: " + (v1 * v2)
+  }
+  function calcQuot() {
+    let v1 = Number(document.getElementById("num1").value)
+    let v2 = Number(document.getElementById("num2").value)
+    if (v2 === 0) {
+      document.getElementById("output-text").innerText = "Error: Division by Zero"
+    } else {
+      document.getElementById("output-text").innerText = "Quotient: " + (v1 / v2)
+    }
+  }
+</script>
+</body>
+</html>

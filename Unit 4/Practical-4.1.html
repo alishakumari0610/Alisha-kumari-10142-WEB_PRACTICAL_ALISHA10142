@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Basics - Alisha</title>
+</head>
+<body>
+
+    <h2 id="headerMsg">Welcome User</h2>
+    <p class="paraContent">Original text content.</p>
+    <button onclick="changeView()">Modify Page</button>        
+    <script>
+        function changeView() {
+            document.getElementById("headerMsg").innerHTML = "Header Updated Successfully!"
+            
+            document.querySelector(".paraContent").innerHTML = "Paragraph text has been replaced."
+
+            document.querySelector("body").style.backgroundColor = "#e0f7fa"
+        }
+    </script>
+</body>
+</html>
